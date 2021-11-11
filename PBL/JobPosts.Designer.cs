@@ -108,6 +108,7 @@ namespace PBL
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "JobPosts";
             this.Size = new System.Drawing.Size(440, 109);
             this.Load += new System.EventHandler(this.JobPosts_Load);

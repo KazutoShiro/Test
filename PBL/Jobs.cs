@@ -26,9 +26,22 @@ namespace PBL
 
         private void Jobs_Load(object sender, EventArgs e)
         {
-           
-            JobPosts jp = new JobPosts();
-            panel1.Controls.Add(jp);
+            
+            panel1.AutoScroll = true;
+            string[] jobs = {"Microsoft","Google","Rakuten","Lazada"};//get data from database jobname and add to string[]
+            string[] Field = { "Software", "Design", "Service", "Stuff" };//get data from database jobfield and add to string[]
+            string[] loc = { "Las Pinas", "Makati", "Japan", "Korea" };
+            for (int i = 0; i < jobs.Length; i++) 
+            {
+                JobPosts jp = new JobPosts();
+                jp.FieldName = Field[i];
+                jp.CompanyName = jobs[i];
+                jp.Location = loc[i];
+                panel1.Controls.Add(jp);
+                
+            }
+            
         }
+        
     }
 }
